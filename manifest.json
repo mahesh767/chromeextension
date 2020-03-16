@@ -1,0 +1,30 @@
+{
+    "manifest_version":2,
+    "name":"darwinbox extension",
+    "version":"0.1",
+    "content_scripts":[
+        {
+            "matches":["http://mail.google.com/*","https://mail.google.com/*"],
+            "js":["content.js"]
+        },
+        {
+            "matches":["http://www.linkedin.com/*","https://www.linkedin.com/*"],
+            "js":["contentlinkedin.js","jquery.min.js"]
+        }
+    ],
+    "background":{
+        "persistent":false,
+        "scripts":["background.js","html2canvas.js"]
+    },
+    "permissions":["tabs","webNavigation","https://*/",
+        "http://*/","notifications","activeTab","<all_urls>","alarms"],
+    "browser_action":
+    {
+        "default_icon":"darwinbox.png",
+        "default_popup":"popup.html"
+        
+    },
+    "content_security_policy": "script-src 'self' https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.3.200/pdf.min.js https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.js  https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js;  object-src 'self'"
+
+    
+}

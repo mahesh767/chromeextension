@@ -1,0 +1,23 @@
+<html>
+    <head></head>
+    <body>
+        <h2>Darwinbox Reimbursement form</h2>
+        <label>EMPname</label> <input type="text" id="name"><br>
+        <label>Company name</label><input type="text" id="cname"><br>
+        <label>Cost</label><input type="number" id="cost"><br>
+        <label>Date</label><input type="date" id="date"><br>
+        <p id="infoabout"></p>
+        <label>Upload the file</label>
+        <input type="file" id="filetoupload" multiple>
+        <canvas id="filepreview" width="100" style="display:none"></canvas>
+        <br>
+        <input type="submit"id="submit" >
+        
+
+    </body>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.3.200/pdf.min.js"></script>
+    <script src="popup.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.js"></script>
+    
+</html>
